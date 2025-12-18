@@ -1,5 +1,6 @@
 fn main() {
-    let x/*insert here missing part(s)*/;
+    let x = 10;
+    let x = x + 1;
     if x == 10 {
         println!("Ten!");
     } else {
