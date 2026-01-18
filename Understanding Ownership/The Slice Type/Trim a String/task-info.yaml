@@ -5,7 +5,7 @@ files:
     visible: true
     placeholders:
       - offset: 21
-        length: 8
+        length: 9
         placeholder_text: /*TODO*/
         initial_state:
           length: 8
@@ -13,18 +13,18 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: HHs/Xh3TetLgxuG0oo7+fg==
         selected: false
-        status: Unchecked
+        status: Failed
       - offset: 34
-        length: 8
+        length: 5
         placeholder_text: /*TODO*/
         initial_state:
           length: 8
           offset: 34
         initialized_from_dependency: false
         encrypted_possible_answer: Tf9c8oedbSvEpZfxODPsIA==
-        selected: false
-        status: Unchecked
-      - offset: 442
+        selected: true
+        status: Failed
+      - offset: 439
         length: 2
         placeholder_text: ..
         initial_state:
@@ -33,7 +33,7 @@ files:
         initialized_from_dependency: false
         encrypted_possible_answer: owJHsxX0/IBia/PCY2iw40IqCou3F0OF8AjhqYKp3qRTgSlrKA9BdrvMJYQrJuGw
         selected: false
-        status: Unchecked
+        status: Failed
     learner_created: false
   - name: src/main.rs
     visible: true
@@ -45,5 +45,27 @@ files:
     visible: false
     learner_created: false
 feedback_link: https://docs.google.com/forms/d/e/1FAIpQLSdfJQgjsbDA4pPGpklj3vJnKNspd9wmEHzAgh6EkoJy2IiRuw/viewform?usp=pp_url&entry.2103429047=Understanding+Ownership+/+The+Slice+Type+/+Trim+a+String
-status: Unchecked
+status: Failed
+feedback:
+  message: |
+    thread 'test' (14436) panicked at Understanding Ownership\The Slice Type\Trim a String\tests\tests.rs:6:5:
+    assertion `left == right` failed: It doesn't seem to trim space
+      left: "   aaa   "
+     right: "aaa"
+    stack backtrace:
+       0: __rustc::rust_begin_unwind
+                 at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library\std\src/panicking.rs:698:5
+       1: core::panicking::panic_fmt
+                 at /rustc/ded5c06cf21d2b93bffd5d884aa6e96934ee4234/library\core\src/panicking.rs:80:14
+       2: core::panicking::assert_failed_inner
+       3: core::panicking::assert_failed
+                 at C:\Users\iskwr\.rustup\toolchains\stable-x86_64-pc-windows-gnu\lib/rustlib/src/rust\library\core\src\panicking.rs:399:5
+       4: tests::test
+                 at .\tests\tests.rs:6:5
+       5: tests::test::{{closure}}
+                 at .\tests\tests.rs:5:10
+       6: core::ops::function::FnOnce::call_once
+                 at C:\Users\iskwr\.rustup\toolchains\stable-x86_64-pc-windows-gnu\lib/rustlib/src/rust\library\core\src\ops\function.rs:250:5
+    note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.
+  time: "Sun, 18 Jan 2026 17:29:40 UTC"
 record: -1
