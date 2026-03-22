@@ -1,6 +1,9 @@
 #[derive(Debug)]
 enum Message {
-    // Define the different variants used below
+    Move {x: i64, y: i64},
+    Echo(String),
+    ChangeColor(i64, i64, i64,),
+    Quit,
 }
 
 impl Message {
